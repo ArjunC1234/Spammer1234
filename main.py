@@ -1,5 +1,4 @@
 import os
-import keep_alive
 import discord
 import randfacts
 import shlex
@@ -52,5 +51,4 @@ async def on_message(message):
 
       await message.channel.send("Invalid Command.")
 
-keep_alive.keep_alive()
 client.run(os.getenv('Token'))
