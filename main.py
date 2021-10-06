@@ -5,7 +5,7 @@ import randfacts
 import shlex
 
 client = discord.Client()
-my_secret = 'ODk0NDM1ODgwMDQxODczNDI5.YVp-Uw.CQQimbsXXTNSsRkUMrtCmayNnXU'
+my_secret = os.environ('Token')
 
 
 @client.event
@@ -53,4 +53,4 @@ async def on_message(message):
       await message.channel.send("Invalid Command.")
 
 keep_alive.keep_alive()
-client.run(my_secret)
+client.run(os.getenv('Token'))
